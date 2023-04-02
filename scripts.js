@@ -18,6 +18,6 @@ document.addEventListener ("DOMContentLoaded", function(){
     let h1 = document.createElement("div");
     let h1Text = document.createTextNode("black square");
     div.appendChild(div);
-    document.body.appendChild(h1);
+    document.body.appendChild(div);
   })
 })
