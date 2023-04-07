@@ -1,6 +1,6 @@
 document.addEventListener ("DOMContentLoaded", function(){
   let paragraph = document.createElement("p");
-  let text = document.createTextNode("This is the sample text built in js instead of html.");
+  let text = document.createTextNode("");
 
   paragraph.style.color = "black";
   paragraph.style.textTransform = "uppercase";
@@ -14,10 +14,14 @@ document.addEventListener ("DOMContentLoaded", function(){
   button.appendChild(btnText);
   document.body.appendChild(button);
 
-  button.addEventListener("click", function() {
-    let h1 = document.createElement("div");
-    let h1Text = document.createTextNode("black square");
-    div.appendChild(div);
-    document.body.appendChild(div);
+  let createBoxBtn = document.getElementById("createBoxBtn");
+  let boxContainer = document.getElementById("box-container")
+
+ createBoxBtn.addEventListener("click",() => {
+    let blackBox = document.createElement ("div");
+    blackBox.style.width = "1cm";
+    blackBox.style.height = "1cm";
+    blackBox.style.backgroundColor = "black"
+    boxContainer.appendChild(blackBox);
   })
 })
