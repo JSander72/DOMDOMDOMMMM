@@ -1,1 +1,5 @@
+.flexTheNotes {
+  display: flex;
+  flex-wrap: wrap;
 
+}
