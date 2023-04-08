@@ -1,4 +1,6 @@
-.flexTheNotes {
+.boxContainer {
+  text-align: center;
+  color: white;
   display: flex;
   flex-wrap: wrap;
 

@@ -1,27 +1,25 @@
-let boxOne = document.createElement("div");
-boxOne.id = "boxOne"
-
-let boxTwo = document.createElement("div");
-boxTwo.id = "boxTwo";
-boxTwo.className = "flexTheNotes";
-
-document.body.appendChild(boxOne);
-document.body.appendChild(boxTwo);
-
-
 document.addEventListener ("DOMContentLoaded", function(){
   let button = document.createElement("button");
   let btnText = document.createTextNode("Add Square");
   button.appendChild(btnText);
   document.body.appendChild(button);
 
+  let boxContainer = document.createElement("div");
+  boxContainer.className = "boxContainer";
+  boxContainer.style.display = "flex";
+  document.body.appendChild(boxContainer);
 
- button.addEventListener("click",() => {
-    let blackBox = document.createElement ("div");
-    blackBox.style.width = "1cm";
-    blackBox.style.height = "1cm";
-    blackBox.style.backgroundColor = "black"
-    document.body.appendChild(blackBox)
+  let counter = 0; // Counter variable
 
-  })
-})
+  button.addEventListener("click",() => {
+    counter++; // Increment counter
+
+    let blackBox = document.createElement("div");
+    blackBox.style.width = "5cm";
+    blackBox.style.height = "5cm";
+    blackBox.style.backgroundColor = "black";
+    blackBox.setAttribute("id", + counter);
+    blackBox.textContent = counter;
+    boxContainer.appendChild(blackBox);
+  });
+});
