@@ -46,7 +46,7 @@ document.addEventListener ("DOMContentLoaded", function(){
           alert("There is no square after this one.");
         }
       }
-      
+
       else {
         let prevSquare = blackBox.previousElementSibling;
         if (prevSquare) {
