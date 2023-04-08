@@ -1,4 +1,14 @@
-.idNumberDisplay :hover{
+.idNumberDisplay {
   display: flex;
+  flex-wrap: wrap;
+  color: black;
+  font-size: xx-large;
+}
+
+.idNumberDisplay:hover {
+  display: flex;
+  flex-wrap: wrap;
   color: white;
+  font-size: xx-large;
+  background-color: blue;
 }

@@ -7,6 +7,8 @@ document.addEventListener ("DOMContentLoaded", function(){
   let boxContainer = document.createElement("div");
   boxContainer.className = "boxContainer";
   boxContainer.style.display = "flex";
+  boxContainer.style.flexWrap = "wrap";
+
   document.body.appendChild(boxContainer);
 
   let counter = 0;
@@ -21,7 +23,6 @@ document.addEventListener ("DOMContentLoaded", function(){
     blackBox.setAttribute("id", + counter);
     blackBox.setAttribute("class","boxes");
 
-
     let idSpan = document.createElement("span");
     idSpan.textContent = counter;
     idSpan.style.width = "150px";
@@ -30,6 +31,31 @@ document.addEventListener ("DOMContentLoaded", function(){
     idSpan.style.alignItems = "center";
     idSpan.setAttribute("class","idNumberDisplay")
     blackBox.appendChild(idSpan);
+
+
+    blackBox.addEventListener("dblclick", () => {
+
+      let id = parseInt(blackBox.getAttribute("id"));
+
+
+      if (id % 2 === 0) {
+        let nextSquare = blackBox.nextElementSibling;
+        if (nextSquare) {
+          nextSquare.remove();
+        } else {
+          alert("There is no square after this one.");
+        }
+      }
+      
+      else {
+        let prevSquare = blackBox.previousElementSibling;
+        if (prevSquare) {
+          prevSquare.remove();
+        } else {
+          alert("There is no square before this one.");
+        }
+      }
+    });
 
     boxContainer.appendChild(blackBox);
   });
