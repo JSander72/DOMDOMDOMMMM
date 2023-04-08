@@ -1,7 +1,4 @@
-.boxContainer {
-  text-align: center;
-  color: white;
+.idNumberDisplay :hover{
   display: flex;
-  flex-wrap: wrap;
-
+  color: white;
 }
